@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-app-bar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>{</span>
+        <span class="font-weight-light">LUCAS ALVES</span>
+        <span>}</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn text @click="$vuetify.goTo('#about',options)">
+        <span class="mr-2">ABOUT</span>
+      </v-btn>
+      <v-btn text>
+        <span class="mr-2">CONTACT</span>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content>
+      <Main />
+      <About />
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Main from './components/Main';
+import About from './components/About';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Main,
+    About
+  },
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
