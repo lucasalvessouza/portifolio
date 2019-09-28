@@ -1,19 +1,55 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>{</span>
-        <span class="font-weight-light">LUCAS ALVES</span>
-        <span>}</span>
-      </v-toolbar-title>
+      <v-toolbar-title>Lucas Alves</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn text @click="$vuetify.goTo('#about',options)">
-        <span class="mr-2">ABOUT</span>
-      </v-btn>
-      <v-btn text>
-        <span class="mr-2">CONTACT</span>
-      </v-btn>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn
+          v-for="item in menu"
+          :key="item.icon"
+          :to="item.link"
+          text
+          @click="$vuetify.goTo(item.section)"
+        >
+          <span class="mr-2">
+            {{
+            item.title
+            }}
+          </span>
+        </v-btn>
+      </v-toolbar-items>
+      <div class="d-lg-none"></div>
+
+      <div class="d-lg-none">
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      </div>
     </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-list-item>
+        <v-list-item-avatar>
+          <v-img :src="require('./assets/lucas.jpg')"></v-img>
+        </v-list-item-avatar>
+
+        <v-list-item-content>
+          <v-list-item-title>Lucas Alves</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list dense>
+        <v-list-item v-for="item in items" :key="item.title" link>
+          <v-list-item-icon>
+            <v-icon>mdi-{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
     <v-content>
       <Main />
@@ -33,7 +69,21 @@ export default {
     About
   },
   data: () => ({
-    //
+    menu: [
+      { icon: "home", title: "Home", section: "#home" },
+      { icon: "info", title: "About", section: "#about" }
+    ],
+    drawer: null,
+    items: [
+      { title: 'Home', icon: 'home' },
+      { title: 'About', icon: 'information' },
+    ],
+
   }),
+  methods: {
+    menuItems() {
+      return this.menu;
+    }
+  }
 };
 </script>
