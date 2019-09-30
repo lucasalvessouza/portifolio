@@ -39,7 +39,12 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item
+          v-for="item in menu"
+          :key="item.title"
+          link
+          @click="$vuetify.goTo(item.section)"
+        >
           <v-list-item-icon>
             <v-icon>mdi-{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -71,13 +76,9 @@ export default {
   data: () => ({
     menu: [
       { icon: "home", title: "Home", section: "#home" },
-      { icon: "info", title: "About", section: "#about" }
+      { icon: "information", title: "About", section: "#about" }
     ],
     drawer: null,
-    items: [
-      { title: 'Home', icon: 'home' },
-      { title: 'About', icon: 'information' },
-    ],
 
   }),
   methods: {

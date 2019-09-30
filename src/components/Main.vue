@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid style="height: 100%" id="home" class="grey lighten-3">
+  <v-container fluid id="home" class="grey lighten-3">
     <v-layout text-center wrap mt-5>
       <v-flex xs12 mb-5>
         <v-avatar size="300">
