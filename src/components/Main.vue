@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid style="height: 100%; padding-top:100px" id="home" class="grey lighten-3">
+  <v-container fluid style="height: 100%" id="home" class="grey lighten-3">
     <v-layout text-center wrap mt-5>
       <v-flex xs12 mb-5>
         <v-avatar size="300">
@@ -13,63 +13,40 @@
       </v-flex>
     </v-layout>
 
-    <v-layout text-center wrap></v-layout>
+    <v-layout text-center wrap>
+      <v-container>
+        <v-row>
+          <v-col>
+            <v-btn
+              class="mx-8"
+              icon
+              v-for="item in social"
+              :key="item.icon"
+              :href="item.href"
+              target="_blank"
+            >
+              <v-icon size="50px">{{ item.icon }}</v-icon>
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
 export default {
   data: () => ({
-    ecosystem: [
+    social: [
       {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader',
+        href: 'https://www.linkedin.com/in/lucas-alves-s/',
+        icon: 'fab fa-linkedin',
       },
       {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify',
-      },
-      {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      },
-    ],
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com',
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer',
-      },
-      {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/layout/pre-defined',
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-      },
-    ],
+        href: 'https://github.com/lucasalvessouza',
+        icon: 'fab fa-github',
+      }
+    ]
   }),
 };
 </script>
