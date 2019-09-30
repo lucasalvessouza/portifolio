@@ -3,7 +3,7 @@
     <v-layout text-center wrap mt-5>
       <v-flex xs12 mb-5>
         <v-avatar size="300">
-          <v-img :src="require('../assets/lucas.jpg')" aspect-ratio="1.7"></v-img>
+          <v-img :src="require('../assets/lucas.jpg')"></v-img>
         </v-avatar>
       </v-flex>
 
