@@ -1,20 +1,19 @@
 <template>
-  <v-container fluid id="about" class="grey darken-4">
-    <v-layout text-center wrap mt-5>
-      <v-flex mb-4 mt-5>
-        <h1 class="display-3 font-weight-bold mb-3 white--text">Who am I?</h1>
-      </v-flex>
+  <v-container fluid id="skills" class="grey darken-2">
+    <v-layout text-center wrap mt-5 mb-5>
       <v-row justify="center">
-        <v-col class="col-8">
-          <h5 class="headline mb-3 white--text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Ut accumsan tortor at elit vestibulum, et finibus eros sodales.
-            Etiam ac volutpat quam. Ut et arcu et tellus condimentum accumsan.
-            Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Donec aliquam egestas neque, vitae egestas neque bibendum sit amet.
-            Praesent faucibus orci et arcu facilisis, quis hendrerit nunc porta.
-          </h5>
+        <v-col class="col-12">
+          <h1 class="display-3 font-weight-bold mb-3 white--text">Skills</h1>
         </v-col>
+        <v-flex class="col-8" mt-3>
+          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-vuejs</v-icon>
+          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-node</v-icon>
+          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-js</v-icon>
+          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-python</v-icon>
+          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-html5</v-icon>
+          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-docker</v-icon>
+          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-git</v-icon>
+        </v-flex>
       </v-row>
     </v-layout>
   </v-container>

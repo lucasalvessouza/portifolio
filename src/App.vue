@@ -25,7 +25,7 @@
       </div>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" app>
       <v-list-item>
         <v-list-item-avatar>
           <v-img :src="require('./assets/lucas.jpg')"></v-img>
@@ -59,6 +59,8 @@
     <v-content>
       <Main />
       <About />
+      <Skills />
+      <History />
     </v-content>
   </v-app>
 </template>
@@ -66,19 +68,25 @@
 <script>
 import Main from './components/Main';
 import About from './components/About';
+import Skills from './components/Skills';
+import History from './components/History';
 
 export default {
   name: 'App',
   components: {
     Main,
-    About
+    About,
+    Skills,
+    History
   },
   data: () => ({
     menu: [
       { icon: "home", title: "Home", section: "#home" },
-      { icon: "information", title: "About", section: "#about" }
+      { icon: "information", title: "About", section: "#about" },
+      { icon: "code-tags", title: "Skills", section: "#skills" },
+      { icon: "code-rocket", title: "History", section: "#history" }
     ],
-    drawer: null,
+    drawer: false,
 
   }),
   methods: {
