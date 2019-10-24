@@ -42,6 +42,7 @@
               </template>
               <v-card class="raised-4">
                 <v-card-title class="title">{{ history.company_name }}</v-card-title>
+                <v-card-title class="subtitle-2">{{ history.range }}</v-card-title>
                 <v-card-text class="text-justify body-1">{{ history.description }}</v-card-text>
               </v-card>
             </v-timeline-item>

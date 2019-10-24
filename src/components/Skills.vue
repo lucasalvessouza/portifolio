@@ -5,14 +5,14 @@
         <v-col class="col-12">
           <h1 class="display-3 font-weight-bold mb-3 white--text">Skills</h1>
         </v-col>
-        <v-flex class="col-8" mt-3>
-          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-vuejs</v-icon>
-          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-node</v-icon>
-          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-js</v-icon>
-          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-python</v-icon>
-          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-html5</v-icon>
-          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-docker</v-icon>
-          <v-icon size="150px" class="mr-5 mt-4" color="white">fab fa-git</v-icon>
+        <v-flex class="col-12 col-md-8" mt-3>
+          <v-icon size="80px" class="mr-5 mt-4" color="white">fab fa-vuejs</v-icon>
+          <v-icon size="80px" class="mr-5 mt-4" color="white">fab fa-node</v-icon>
+          <v-icon size="80px" class="mr-5 mt-4" color="white">fab fa-js</v-icon>
+          <v-icon size="80px" class="mr-5 mt-4" color="white">fab fa-python</v-icon>
+          <v-icon size="80px" class="mr-5 mt-4" color="white">fab fa-html5</v-icon>
+          <v-icon size="80px" class="mr-5 mt-4" color="white">fab fa-docker</v-icon>
+          <v-icon size="80px" class="mr-5 mt-4" color="white">fab fa-git</v-icon>
         </v-flex>
       </v-row>
     </v-layout>
