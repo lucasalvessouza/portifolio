@@ -25,7 +25,7 @@
       </div>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer v-model="drawer" temporary app>
       <v-list-item>
         <v-list-item-avatar>
           <v-img :src="require('./assets/lucas.jpg')"></v-img>
@@ -84,9 +84,9 @@ export default {
       { icon: "home", title: "Home", section: "#home" },
       { icon: "information", title: "About", section: "#about" },
       { icon: "code-tags", title: "Skills", section: "#skills" },
-      { icon: "code-rocket", title: "History", section: "#history" }
+      { icon: "rocket", title: "History", section: "#history" }
     ],
-    drawer: false,
+    drawer: null,
 
   }),
   methods: {
